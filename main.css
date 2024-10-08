@@ -162,22 +162,34 @@ footer {
 }
 
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Empilhar os elementos em telas menores */
-    }
-
-    .store-front {
-        margin-right: 0;
-        margin-bottom: 16px;
-    }
-
-    form input,
-    form textarea,
-    form button {
-        width: 100%; /* Formulários ocupando largura total em telas pequenas */
-    }
+/* Estilos gerais para desktops */
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* Estilos específicos para dispositivos móveis (com largura de até 640px) */
+@media screen and (max-width: 640px) {
+    body {
+        font-size: 14px; /* Ajusta o tamanho da fonte para telas menores */
+    }
+    
+    .container {
+        width: 100%; /* Alarga o container para preencher toda a tela */
+        padding: 0 10px; /* Adiciona espaço nas laterais */
+    }
+    
+    .imagem {
+        max-width: 100%; /* Assegura que imagens não excedam a largura da tela */
+        height: auto; /* Mantém proporção da imagem */
+    }
+}
 
 
